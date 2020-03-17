@@ -7,7 +7,7 @@ Cell Forest is a gene selection method based on single-cell RNA sequencing data 
 Cell Forest is implemented as an R package, which is freely available for non-commercial use. 
 
 Version Changes 
-[CellForest_1.0.0.tar.gz](https://github.com/genemine/CellForest/CellForest_1.0.0.tar.gz)
+[CellForest_1.0.0.tar.gz](https://github.com/genemine/CellForest/blob/master/CellForest_1.0.0.tar.gz)
 
 # 2. Install
 
