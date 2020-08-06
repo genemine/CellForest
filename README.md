@@ -13,7 +13,7 @@ Version Changes
 
 - Step 1: Firstly, install the dependent packages: **randomForest**.
 
-- Step 2: Download the above CellForest package and install it in R (tested on version 3.2.0)
+- Step 2: Download the above CellForest package and install it in R (tested on version 3.6.2)
 
 
 
