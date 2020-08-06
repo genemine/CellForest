@@ -23,7 +23,8 @@ Notes: CellForest was tested on linux, Mac and Windows; and it runs smoothly on 
 
 Using CellForest is very simple. Just follow the steps below: 
 
-Step 1: open your R or Rstudio 
+Step 1: open your R or Rstudio
+
 Step 2: in the R command window, run the following command to load the R package
 ```
 > library(CellForest)
