@@ -12,10 +12,15 @@ Version Changes
 # 2. Install
 
 - Step 1: Firstly, install the dependent packages: **randomForest**.
+```
+> install.packages("randomForest")
+```
 
 - Step 2: Download the above CellForest package and install it in R (tested on version 3.6.2)
 
-
+```
+> install.packages("D:/CSU/cell_forest/20200706/CellForest_*.0.0.tar.gz", repos = NULL, type = "source")
+```
 
 
 # 3. Usage
