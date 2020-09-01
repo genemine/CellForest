@@ -13,7 +13,7 @@ Version Changes
 
 - Step 1: Firstly, install the dependent packages: **randomForest**.
 ```
-> install.packages("randomForest")
+> install.packages("ranger")
 ```
 
 - Step 2: Download the above CellForest package and install it in R (tested on version 3.6.2)
@@ -21,7 +21,6 @@ Version Changes
 ```
 > install.packages("D:/CSU/cell_forest/20200706/CellForest_*.0.0.tar.gz", repos = NULL, type = "source")
 ```
-
 
 # 3. Usage
 Notes: CellForest was tested on linux, Mac and Windows; and it runs smoothly on these different systems.
@@ -38,10 +37,34 @@ Step 3: in R command window, run the following command to see the help document 
 ```
 > ?CellForest
 ```
-Step 4: At the end of the help page, there is an example code. Copy these codes to command to run as follows:
+At the end of the help page, there is an example code. Copy these codes to command to run as follows:
+Step 4: load demo data containing 191 cells and 6278 genes. The cells in the demo data come from 3 different types. The file 'cfdemo' includes a gene expression matrix (gene in rows and samples in columns) and the corresponding cell label.
 ```
-data(CFDemo)
-result = CellForest(data,kcluster = kprior)
+> data(cfdemo)
+> # data (6278*191): a expression data matrix,gene in rows and samples in columns
+> # label (1*191): corresponding cell label
+```
+Step 5: Running Cell Forest function
+```
+> # Three parameters:
+> # data: A expression data matrix,gene in rows and samples in columns.
+> # k: The number of clusters to output.
+> # ncores (default: -1): The number of cores to be used when the program running in parallel.
+> 
+> result = CellForest(data = data, k = 3)
+> 
+> # result:
+> # samplegeneweight: The weights of genes calculated by function randomForest based on random permuted predict label.
+> # geneImportance: The weights of genes calculated by function randomForest.
+> # selgenes: The genes Cell Forest final select.
+> # selgeneratio: The proportion of the number of selected genes in the total genes.
+> # runningtime: The running time of the program.
+> # cutoff: Threshold for selecting genes.
+> # plabel: Predicated label.
+```
+Step 6: Running Cell Forest function
+```
+> result = CellForest(data = data, k = 3)
 ```
 
 # 4. Contact
