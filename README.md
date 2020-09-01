@@ -47,7 +47,7 @@ Step 4: load demo data containing 191 cells and 6278 genes. The cells in the dem
 > # label (1*191): corresponding cell label
 ```
 
-Step 5: Running Cell Forest function
+Step 5: Running Cell Forest function \n
 Parameters:
 ```
 > # data: A expression data matrix,gene in rows and samples in columns.
@@ -69,7 +69,7 @@ Run code:
 > result = CellForest(data = data, k = 3)
 ```
 
-Step 6: clustering test (Hierarchical Clustering)
+Step 6: Clustering test (Hierarchical Clustering)
 ```
 > # clustering data with all genes
 > clusters1 = cutree(hclust(dist(t(data))),k=3)
