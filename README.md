@@ -50,9 +50,13 @@ Step 5: Running Cell Forest function
 > # data: A expression data matrix,gene in rows and samples in columns.
 > # k: The number of clusters to output.
 > # ncores (default: -1): The number of cores to be used when the program running in parallel.
-> 
+```
+
+```
 > result = CellForest(data = data, k = 3)
-> 
+```
+
+```
 > # result:
 > # samplegeneweight: The weights of genes calculated by function randomForest based on random permuted predict label.
 > # geneImportance: The weights of genes calculated by function randomForest.
@@ -62,10 +66,38 @@ Step 5: Running Cell Forest function
 > # cutoff: Threshold for selecting genes.
 > # plabel: Predicated label.
 ```
-Step 6: Running Cell Forest function
+Step 6: clustering test (Hierarchical Clustering)
+
 ```
-> result = CellForest(data = data, k = 3)
+> # clustering data with all genes
+> clusters1 = cutree(hclust(dist(t(data))),k=3)
+> # clustering data with selected genes
+> clusters2 = cutree(hclust(dist(t(data[result$selgenes,]))),k=3)
 ```
+
+
+Step 7: Evaluate clustering performance
+```
+> # two parameters:
+> # truelabel: A numeric vector of true labels of each sample.
+> # predlabel: A numeric vector of predicted labels of each sample.
+```
+
+```
+> evalcluster(truelabel = label, predlabel = clusters1)
+> NMI        RI       ARI 
+> 0.6202449 0.7133095 0.4315412 
+> evalcluster(truelabel = label, predlabel = clusters2)
+> NMI  RI ARI 
+>  1   1   1 
+```
+```
+> # return:
+> # NMI: Value of normalized mutual information.
+> # RI: Value of rand index.
+> # ARI: Value of adjusted rand index.
+```
+
 
 # 4. Contact
 If any questions, please do not hesitate to contact us at: 
