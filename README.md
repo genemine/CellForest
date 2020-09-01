@@ -78,7 +78,7 @@ Step 6: Clustering test (Hierarchical Clustering)
 > clusters2 = cutree(hclust(dist(t(data[result$selgenes,]))),k=3)
 ```
 
-Step 7: Evaluate clustering performance  
+Step 7: Evaluate clustering performance ([Evalcluster.R](https://github.com/genemine/CellForest/blob/master/CellForest_2.0.0.tar.gz)./code/Evalcluster.R)  
 Parameters:
 ```
 > # truelabel: A numeric vector of true labels of each sample.
