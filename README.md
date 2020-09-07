@@ -39,7 +39,7 @@ Step 3: in R command window, run the following command to see the help document 
 > ?CellForest
 ```
 
-At the end of the help page, there is an example code. Copy these codes to command to run as follows:
+At the end of the help page, there is an example code. Copy these codes to command to run as follows:  
 Step 4: load demo data containing 191 cells and 6278 genes. The cells in the demo data come from 3 different types. The file 'cfdemo' includes a gene expression matrix (gene in rows and samples in columns) and the corresponding cell label.
 ```
 > data(cfdemo)
